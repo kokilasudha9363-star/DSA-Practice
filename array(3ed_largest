@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[6]={2,4,5,7,2,8};
+    int large=a[0];
+    int 2large=INT_MIN;
+    int 3large=INT_MIN;
+    for(int i=1;i<=6;i++){
+        if(large<a[i]){
+            3large=2large;
+            2large=large;
+            large=a[i];
+        }
+        else if(2large<a[i] && a[i]!=large){
+            3large=2large;<
+            2large=a[i];
+
+        }
+        else if(3large<a[i] && a[i]!=large){
+            3large=a[i];
+        }
+
+    }
+    return 0;
+}
