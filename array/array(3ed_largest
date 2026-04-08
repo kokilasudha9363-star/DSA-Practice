@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[6]={2,4,5,7,2,8};
+    int large=arr[0];
+    int slarge=INT_MIN;
+    int tlarge=INT_MIN;
+    for(int i=1;i<=6;i++){
+        if(large<arr[i]){
+            tlarge=slarge;
+            slarge=large;
+            large=arr[i];
+        }
+        else if(slarge<arr[i] && arr[i]!=large){
+            tlarge=slarge;
+            slarge=arr[i];
+
+        }
+        else if(tlarge<arr[i] && arr[i]!=large){
+            tlarge=arr[i];
+        }
+
+    }
+    cout<<tlarge;
+    return 0;
